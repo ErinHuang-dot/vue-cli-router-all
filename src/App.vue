@@ -1,30 +1,36 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div class="sticky-footer">
+    <loading v-model="isLoading"></loading>
+    <router-view/>
+    <div class="footer py-4 bg-dark sticky-bottom">
+      <div class="container text-center">
+        <p class="mb-0"><a href="https://www.flaticon.com/free-icons/food-and-restaurant" title="food and restaurant icons">Food and restaurant icons created by LAFS - Flaticon</a></p>
+      </div>
+    </div>
+  </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+<script>
+export default {
+  data () {
+    return {
+      isLoading: false
     }
   }
+}
+</script>
+
+<style lang="scss">
+// @import "bootstrap/scss/bootstrap";
+@import "./assets/stylesheets/all.scss";
+
+.sticky-footer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.sticky-bottom {
+  margin-top: auto;
 }
 </style>
