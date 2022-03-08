@@ -2,8 +2,8 @@
   <main id="loginApp">
     <div class="container">
       <div class="wrap d-flex justify-content-center align-items-center">
-        <div class="text-center">
-          <img class="login-logo" src="../assets/logo.png" alt="logo" />
+        <div class="">
+          <img class="login-logo d-block mx-auto" src="../assets/logo.png" alt="logo" />
           <h2 class="fs-3 text-center mb-4">請先登入</h2>
           <Form
           v-slot="{ errors, validate }" @submit="login">
@@ -14,6 +14,7 @@
                   class="form-control"
                   :class="{ 'is-invalid': errors['email'] }"
                   name="email"
+                  rules="required"
                   v-model="user.username"
                   id="floatingEmail"
                   placeholder="Email address"
@@ -27,6 +28,7 @@
                   class="form-control"
                   :class="{ 'is-invalid': errors['password'] }"
                   name="password"
+                  rules="required"
                   v-model="user.password"
                   id="floatingPass"
                   placeholder="Password"
