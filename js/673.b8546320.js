@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkrouter"]=self["webpackChunkrouter"]||[]).push([[673],{3673:function(r,n,e){e.r(n),e.d(n,{default:function(){return l}});var t=e(6252);const u={class:"container mb-5"},c=(0,t._)("h2",{class:"my-4"},"訂單管理",-1),s=[c];function a(r,n){return(0,t.wg)(),(0,t.iD)("div",u,s)}var o=e(3744);const i={},f=(0,o.Z)(i,[["render",a]]);var l=f}}]);
+//# sourceMappingURL=673.b8546320.js.map
